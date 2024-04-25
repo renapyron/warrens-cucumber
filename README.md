@@ -87,3 +87,38 @@ When running on a CI, you should setup your jobs with the expected environment v
 ## To use a custom World Objet
 
 - cutomize the given Custom World Object : [custom-world](world/custom-world.ts)
+
+
+package json rip:
+
+"dependencies": {
+    "@cucumber/cucumber": "^7.3.2",
+    "@types/pg": "^8.6.5",
+    "axios": "^0.26.1",
+    "@types/chai": "^4.3.0",
+    "pg": "^8.7.3",
+    "qs": "^6.10.3",
+    "chai": "^4.3.6",
+    "chromedriver": "^99.0.0",
+    "cucumber-html-reporter": "^5.5.0",
+    "dotenv": "^16.0.0",
+    "moment": "^2.29.1",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.1.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.5.5",
+    "winston": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/qs": "^6.9.7",
+    "@types/selenium-webdriver": "^4.0.18",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1"
+  }
+}

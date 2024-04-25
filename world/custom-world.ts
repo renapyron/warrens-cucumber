@@ -1,5 +1,8 @@
 import { SimpleMathsCalculator } from '../domains/simple-maths/simple-maths-calculator';
 import { setWorldConstructor } from '@cucumber/cucumber';
+import { WebDriver, Builder } from 'selenium-webdriver';
+import * as chromeOpts from 'selenium-webdriver/chrome'
+import 'chromedriver';
 import { Stream } from 'stream';
 
 export type MediaType = 'text/plain' | 'image/png' | 'application/json';
@@ -25,6 +28,7 @@ export interface CucumberWorldConstructorParams {
 export class CustomWorld {
   public attach: AttachFn;
   public calculator: SimpleMathsCalculator = new SimpleMathsCalculator();
+  public webdriver: WebDriver;
   public foo = false;
   public debug = false;
 
@@ -33,6 +37,8 @@ export class CustomWorld {
    */
   constructor({ attach }: CucumberWorldConstructorParams) {
     this.attach = attach;
+    const builder = new Builder();
+    this.webdriver = builder.forBrowser('chrome').setChromeOptions(new chromeOpts.Options()).build();
   }
 }
 
