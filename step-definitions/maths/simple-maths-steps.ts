@@ -1,7 +1,7 @@
 import { CustomWorld } from '../../world';
 import { SimpleMathsCalculator } from '../../domains/simple-maths/simple-maths-calculator';
 import { Before, Given, Then, When } from '@cucumber/cucumber';
-import expect from 'expect';
+import { assert } from 'chai';
 
 Given('I have a simple maths calculator', async function (this: CustomWorld) {
   this.calculator = new SimpleMathsCalculator();
@@ -16,7 +16,7 @@ When('I increment this variable by {int}', async function (this: CustomWorld, va
 });
 
 Then('the variable should contain {int}', async function (this: CustomWorld, value: number) {
-  expect(this.calculator.result).toBe(value);
+  assert.strictEqual(this.calculator.result, value);
 });
 
 /**
